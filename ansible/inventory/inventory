@@ -1,0 +1,14 @@
+node1 ansible_ssh_host=193.161.189.35  internal_ip=10.3.0.75
+node2 ansible_ssh_host=193.161.189.63  internal_ip=10.3.0.199
+node3 ansible_ssh_host=193.161.189.56  internal_ip=10.3.0.209
+
+
+[masters]
+node1
+
+[etcd:children]
+masters
+
+[nodes]
+node2
+node3
